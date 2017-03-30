@@ -1,14 +1,17 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ShMusic from './ShMusic';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-const App = () => (
-  <MuiThemeProvider>
-    <ShMusic />
-  </MuiThemeProvider>
-);
+class App extends React.Component {
+  render() {
+    return (
+      <MuiThemeProvider>
+        <ShMusic />
+      </MuiThemeProvider>
+    )
+  }
+}
 
 ReactDOM.render(
   <App/>,
