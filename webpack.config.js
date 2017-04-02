@@ -20,7 +20,7 @@ module.exports = {
   entry: [
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:' + port,
-    pathFunc('src/app.jsx'),
+    pathFunc('src/root.jsx'),
   ],
   output: {
     path: pathFunc('build'),
