@@ -20,7 +20,7 @@ npm start
 http://127.0.0.1:3000/. Any changes to the project files will trigger a new build and a refresh.
 
 
-## What's there
+## What's here
 
 * `/src` is the main app directory, where changes are to be made.
 * `/src/components` contains stateless, presentational components.
