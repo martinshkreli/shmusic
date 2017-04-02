@@ -2,7 +2,7 @@
 
 ## How to use
 
-> First, make sure you have modern versions of `node` and `yarn` installed.
+> First, make sure modern versions of `node` and `yarn` are installed.
 
 #### Install dependencies
 
@@ -16,8 +16,7 @@ yarn install
 npm start
 ```
 
-> A new window should open. Otherwise, you can find the app at
-http://127.0.0.1:3000/. Any changes to the project files will trigger a new build and a refresh.
+> A new window should open. Otherwise, the app can be found at http://127.0.0.1:3000/. Any changes to the project files will trigger a new build, followed by a refresh.
 
 
 ## What's here
