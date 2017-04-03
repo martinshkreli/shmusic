@@ -1,14 +1,22 @@
-.key {
-  border: 1px solid #000;
-  border-radius: 4px;
-  width: 46px; // temp
-  &.active {
-    background-color: green;
-  }
-  &.black {
-    background-color: black;
-  }
-  &.white {
-    background-color: white;
+$height: 24px;
+
+ul {}
+ul li {
+  &[class^="key-"] {
+    border: 1px solid #000;
+    border-radius: 4px;
+    list-style-type: none;
+    height: $height;
+    width: $height * 2; // temp
+
+    &.active {
+      background-color: green;
+    }
+    &.black {
+      background-color: black;
+    }
+    &.white {
+      background-color: white;
+    }
   }
 }
