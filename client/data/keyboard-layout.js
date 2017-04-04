@@ -1,0 +1,47 @@
+const keyboardLayout = [
+  [
+    { letter: '2', keyStyle: 'black' },
+    { letter: '3', keyStyle: 'black' },
+    { letter: '4', keyStyle: 'placeholder' },
+    { letter: '5', keyStyle: 'black' },
+    { letter: '6', keyStyle: 'black' },
+    { letter: '7', keyStyle: 'black' },
+    { letter: '8', keyStyle: 'placeholder' },
+    { letter: '9', keyStyle: 'black' },
+    { letter: '0', keyStyle: 'black' },
+  ], [
+    { letter: 'Q', keyStyle: 'white' },
+    { letter: 'W', keyStyle: 'white' },
+    { letter: 'E', keyStyle: 'white' },
+    { letter: 'R', keyStyle: 'white' },
+    { letter: 'T', keyStyle: 'white' },
+    { letter: 'Y', keyStyle: 'white' },
+    { letter: 'U', keyStyle: 'white' },
+    { letter: 'I', keyStyle: 'white' },
+    { letter: 'O', keyStyle: 'white' },
+    { letter: 'P', keyStyle: 'white' },
+  ], [
+    { letter: 'S', keyStyle: 'black' },
+    { letter: 'D', keyStyle: 'black' },
+    { letter: 'F', keyStyle: 'placeholder' },
+    { letter: 'G', keyStyle: 'black' },
+    { letter: 'H', keyStyle: 'black' },
+    { letter: 'J', keyStyle: 'black' },
+    { letter: 'K', keyStyle: 'placeholder' },
+    { letter: 'L', keyStyle: 'black' },
+    { letter: ';', keyStyle: 'black' },
+  ], [
+    { letter: 'Z', keyStyle: 'white' },
+    { letter: 'X', keyStyle: 'white' },
+    { letter: 'C', keyStyle: 'white' },
+    { letter: 'V', keyStyle: 'white' },
+    { letter: 'B', keyStyle: 'white' },
+    { letter: 'N', keyStyle: 'white' },
+    { letter: 'M', keyStyle: 'white' },
+    { letter: ',', keyStyle: 'white' },
+    { letter: '.', keyStyle: 'white' },
+    { letter: '/', keyStyle: 'white' },
+  ],
+];
+
+export default keyboardLayout
