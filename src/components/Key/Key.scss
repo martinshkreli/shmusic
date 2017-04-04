@@ -1,0 +1,14 @@
+.key {
+  border: 1px solid #000;
+  border-radius: 4px;
+  width: 46px; // temp
+  &.active {
+    background-color: green;
+  }
+  &.black {
+    background-color: black;
+  }
+  &.white {
+    background-color: white;
+  }
+}
