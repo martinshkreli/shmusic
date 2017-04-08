@@ -52,6 +52,7 @@
     "open-browser-webpack-plugin": "0.0.2",
     "redux-immutable-state-invariant": "^2.0.0",
     "sass-loader": "^3.2.0",
+    "script-loader": "^0.7.0",
     "style-loader": "~0.13.0",
     "webpack": "1.x",
     "webpack-dev-server": "1.x"

@@ -7,7 +7,7 @@ ul li {
     border-radius: 4px;
     list-style-type: none;
     height: $height;
-    width: $height * 2; // temp
+    width: $height * 1.8; // temp
 
     &.active {
       background-color: green;

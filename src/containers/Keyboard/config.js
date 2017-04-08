@@ -10,34 +10,33 @@ const base = {
 
 const enharmonic = ['B', 'E'];
 
-export default {
-  range(func, start = 2, stop = 8) {
-    for (let octave = start; octave <= stop; ++octave) {
-      func(octave);
+const range = (map, func, start = 2, stop = 8) => {
+  for (let octave = start; octave <= stop; ++octave) {
+    for (let note in map) {
+      func({ note, octave });
     }
-  },
-  get keys() {
-    let arr = [];
-    const notes = this.notes;
-    this.range(octave => {
-      for (let note in notes) {
+  }
+};
+
+export default {
+  keys(total = 49) {
+      let arr = [];
+      const notes = this.notes;
+      range(notes, ({ note }) => {
         const number = notes[note];
         arr = [...arr, { note, number }];
-      }
-    });
-    
-    return arr.slice(0, 49);
-  },
-  get notes() {
-    let map = {};
-    this.range(octave => {
-      for (let note in base) {
+      });
+
+      return arr.slice(0, total);
+    },
+    get notes() {
+      let map = {};
+      range(base, ({ note, octave }) => {
         const key = base[note] + (octave * 12);
         map[`${note}${octave}`] = key;
         if (!enharmonic.includes(note)) map[`${note}#${octave}`] = key + 1;
-      }
-    });
-    
-    return map;
-  },
+      });
+
+      return map;
+    },
 };
