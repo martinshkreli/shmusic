@@ -8,12 +8,18 @@ export default (state = instrument, action = {}) => {
     case PLAY_NOTE:
       return {
         ...instrument,
-        activeNote: action.payload.note,
+        inUse: {
+          // keyboard: true,
+          key: action.payload.note,
+        },
       };
     case STOP_NOTE:
       return {
         ...instrument,
-        activeNote: null,
+        inUse: {
+          // keyboard: false,
+          key: null,
+        },
       };
     default:
       return state;
@@ -21,8 +27,8 @@ export default (state = instrument, action = {}) => {
 }
 
 export const playNote = note => {
-  return (dispatch, getState, { midi }) => {
-    // midi.noteOn(channel, note, velocity, delay);
+  return (dispatch, getState) => {
+    MIDI.AudioTag.noteOn(0, note, 127, 0);
     dispatch({
       type: PLAY_NOTE,
       payload: { note },
@@ -31,8 +37,8 @@ export const playNote = note => {
 }
 
 export const stopNote = note => {
-  return (dispatch, getState, { midi }) => {
-    // midi.noteOff(channel, note, delay);
+  return (dispatch, getState) => {
+    MIDI.AudioTag.noteOff(0, note, 0);
     dispatch({ type: STOP_NOTE });
   };
 }

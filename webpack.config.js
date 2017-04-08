@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 var port = process.env.PORT || 3000;
-var pathFunc = function (str) {
+var pathFunc = function(str) {
   return path.resolve(__dirname, str);
 };
 
@@ -37,7 +37,10 @@ module.exports = {
       include: pathFunc('src'),
       exclude: /node_modules/,
       loaders: ['babel'],
-    }, ]
+    }, {
+      test: /\.exec\.js$/,
+      loaders: ['script']
+    }]
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],

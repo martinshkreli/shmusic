@@ -1,4 +1,7 @@
 export const instrument = {
   channel: 1,
-  activeNote: null,
+  inUse: {
+    // keyboard: false,
+    key: null,
+  },
 };
