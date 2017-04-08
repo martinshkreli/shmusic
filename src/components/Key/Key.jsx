@@ -1,15 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import autobind from 'autobind-decorator'
+import './Key.scss';
 
 @autobind
 class Key extends Component {
-  static propTypes = {
-    accidental: PropTypes.bool.isRequired,
-    active: PropTypes.bool.isRequired,
-    note: PropTypes.number.isRequired,
-    onKeyDown: PropTypes.func,
-    onKeyUp: PropTypes.func,
-  };
   constructor(props) {
     super(props);
     this.state = {
@@ -21,10 +15,11 @@ class Key extends Component {
   handleMouseOver() {}
   handleMouseOut() {}
   render() {
+    const { accidental, active, note } = this.props;
     return (
       <li
         className={[
-          'key',
+          `key-${note}`,
           (accidental ? 'black' : 'white'),
           (active ? 'active' : ''),
         ].join(' ')}
@@ -36,5 +31,13 @@ class Key extends Component {
     );
   }
 }
+
+Key.propTypes = {
+  accidental: PropTypes.number.isRequired,
+  active: PropTypes.bool.isRequired,
+  note: PropTypes.number.isRequired,
+  onKeyDown: PropTypes.func,
+  onKeyUp: PropTypes.func,
+};
 
 export default Key;
