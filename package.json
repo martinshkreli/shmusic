@@ -7,10 +7,6 @@
       "name": "Martin Shkreli",
       "url": "https://github.com/martinshkreli"
     },
-    {
-      "name": "Ricky Muldrew",
-      "url": "https://github.com/iamricky"
-    }
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
